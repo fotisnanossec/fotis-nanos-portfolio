@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyst & Artist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-gradient {
+            background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-800 transition duration-300 hover:text-gray-600">Analyst & Artist</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#home" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Home</a>
+                <a href="#cybersecurity" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Cybersecurity</a>
+                <a href="#projects" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Projects</a>
+                <a href="#music" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Music</a>
+                <a href="#about" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">About Me</a>
+                <a href="#contact" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden custom-gradient px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Home</a>
+            <a href="#cybersecurity" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Cybersecurity</a>
+            <a href="#projects" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Projects</a>
+            <a href="#music" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Music</a>
+            <a href="#about" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">About Me</a>
+            <a href="#contact" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300">Contact</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center text-center p-6 custom-gradient text-gray-800">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-gray-900">
+                    <span class="block">From Classical Precision</span>
+                    <span class="block mt-2 md:mt-4">to Digital Defense</span>
+                </h1>
+                <h2 class="mt-6 text-2xl md:text-3xl font-semibold text-gray-700">Analyst & Artist</h2>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed">
+                    This portfolio bridges two worlds: the structured discipline of classical music and the logical rigor of cybersecurity. The same skills—meticulous attention to detail, pattern recognition, and creative problem-solving—drive my work, whether analyzing a piece of music or a digital threat.
+                </p>
+                <div class="mt-10 mx-auto w-48 h-48 bg-gray-300 rounded-full flex items-center justify-center border-4 border-gray-600">
+                    <span class="text-sm text-gray-500">Placeholder for Photo</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="cybersecurity" class="min-h-screen p-6 bg-gray-200">
+            <div class="container mx-auto py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Cybersecurity</h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        Transitioning from a background in music and early technical education in electronics and networking, I am applying analytical skills to cybersecurity through self-study and practical training.
+                    </p>
+                </div>
+                <div class="flex justify-center my-8">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4159956" style="border:none; width:100%; max-width: 500px; height: 180px;"></iframe>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Threat Intelligence</h3>
+                        <p class="text-gray-700">
+                            Proficient in frameworks like MITRE ATT&CK, the Diamond Model, and the Cyber Kill Chain.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Network Analysis</h3>
+                        <p class="text-gray-700">
+                            Experienced with tools such as Wireshark, Tcpdump, Snort, and Nmap.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Systems & Scripting</h3>
+                        <p class="text-gray-700">
+                            Knowledge of Linux, Windows, PowerShell, and Python/Bash scripting.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Web Security</h3>
+                        <p class="text-gray-700">
+                            Familiarity with Burp Suite, OWASP Top 10, and SQL Injection techniques.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Forensics</h3>
+                        <p class="text-gray-700">
+                            Skilled in digital forensics using tools like Volatility, KAPE, Redline, and Windows Forensics.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Certifications & Training</h3>
+                        <p class="text-gray-700">
+                            Completed TryHackMe Security Analyst Level 1 path (88%), ISC2 Certified in Cybersecurity preparation (87% in pre-assessment). TryHackMe rank: [0xD][LEGEND], top 2% worldwide (position 20657), 23 badges, 149 rooms completed. Additional paths: Jr. Penetration Tester (22%), Web Application Pentesting (44%), Security Engineer (10%).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="min-h-screen p-6 bg-gray-100">
+            <div class="container mx-auto py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Technical Projects</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">AI-Based Market Analysis</h3>
+                        <p class="text-gray-700">
+                            Developed an AI agent for trend detection using Python to fetch data via Bybit and Binance APIs.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Automated Log Journalist</h3>
+                        <p class="text-gray-700">
+                            Concept and partial implementation for voice note recording via smartphone, automated file processing, and use of local LLMs for semantic analysis and tagging.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="min-h-screen p-6 bg-gray-200">
+            <div class="container mx-auto py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Music</h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        A career defined by classical discipline, artistic expression, and pedagogical passion.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-xl mb-12">
+                    <h3 class="text-2xl font-bold text-gray-600 mb-4">Concert Artist & Music Educator</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        As a concert guitarist, ensemble artist, arranger, and music teacher, I have built a career on the foundation of classical and traditional music. Since 2010, I have performed internationally as a soloist and in ensembles, with numerous concerts across Austria, Germany, Greece, France, Croatia, Serbia, and Argentina. Collaborations include Opal Sinfonietta, Orquesta Sinfónica UNT (Concierto de Aranjuez), Orpheus Kammerorchester, Noties Notes (Musikverein Wien, Gasteig München), contemporary dance groups (SEAD Salzburg), performance artists (Stadttheater Baden), duets with opera singers, Rembetiko ensemble "KLIKA", and guest soloist at festivals (Forum Gitarre Wien, Festival Nord Pais de Calais). I am also an experienced music educator, having taught at various music schools and institutions. My key competencies in this field include discipline, analytical thinking, and self-organization.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-4">Education</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li>
+                                <p><strong class="text-gray-900">Magister Artium - Guitar Performance</strong></p>
+                                <p class="text-sm text-gray-500">University Mozarteum Salzburg (2006-2010)</p>
+                            </li>
+                            <li>
+                                <p><strong class="text-gray-900">Diploma - Classical Guitar</strong></p>
+                                <p class="text-sm text-gray-500">National Conservatory of Athens (1992-2006)</p>
+                            </li>
+                            <li>
+                                <p><strong class="text-gray-900">IGP - Instrumental and Vocal Pedagogy</strong></p>
+                                <p class="text-sm text-gray-500">Vienna Konservatorium (2018)</p>
+                            </li>
+                            <li>
+                                <p><strong class="text-gray-900">Diploma - Electronics, Computer & Network Technology</strong></p>
+                                <p class="text-sm text-gray-500">Technical Vocational School (TEE), Athens (1998-2002)</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-4">Key Skills & Tools</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li>
+                                <p><strong class="text-gray-900">Music Software:</strong> Proficient in Sibelius and iReal Pro.</p>
+                            </li>
+                            <li>
+                                <p><strong class="text-gray-900">Performance:</strong> Solo and ensemble concerts across Europe and Argentina.</p>
+                            </li>
+                            <li>
+                                <p><strong class="text-gray-900">Pedagogy:</strong> Extensive experience teaching classical guitar.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Live Performances</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-4 rounded-lg shadow-xl">
+                            <h4 class="text-xl font-semibold text-gray-600 mb-2">Concierto de Aranjuez</h4>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/ysAEJB68PPo?si=89K_xNgj8108_THd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm">Performance in Tucuman, Argentina.</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-xl">
+                            <h4 class="text-xl font-semibold text-gray-600 mb-2">Live Performance</h4>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/4LeL1xf_VzQ?si=3RAHMtqX40SfZwAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm">Performance in Boulogne sur Mer, France.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg shadow-xl">
+                            <h4 class="text-xl font-semibold text-gray-600 mb-2">Live Solo Performance</h4>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/-w22WMbXfE8?si=wyZjdh0D2-kAmDV5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm">Performance in Attica, Greece.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="min-h-screen p-6 bg-gray-100">
+            <div class="container mx-auto py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">About Me</h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        A unique career journey from artistic discipline to digital defense.
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center order-first lg:order-none">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-full flex items-center justify-center border-4 border-gray-600 shadow-lg">
+                            <span class="text-sm text-gray-500 text-center">Your Photo Here</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-4">Bridging Two Worlds</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            My path is a testament to the power of transferable skills. [cite_start]With a diploma in Electronics, Computer, and Network Technology from Technical Vocational School (TEE), Athens (1998–2002) [cite: 71][cite_start], and years as a professional concert guitarist [cite: 106][cite_start], I honed meticulous **attention to detail**, rigorous **practice**, and understanding of **complex structures**[cite: 109]. [cite_start]These principles form the bedrock of my transition to cybersecurity[cite: 63].
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            In music, I analyze scores for patterns and challenges. In cybersecurity, I apply that same **analytical rigor** to dissect network traffic, identify vulnerabilities, and defend against threats. The **creative problem-solving** for arranging music or overcoming passages mirrors developing security solutions.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            [cite_start]This unique fusion of an artistic past, an early technical foundation, and self-driven cybersecurity training [cite: 64] equips me with a rare combination of **technical proficiency** and **strategic foresight**. [cite_start]I am a dedicated analyst and artist, bringing a disciplined, creative, and proactive approach to every challenge[cite: 65].
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Languages</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            [cite_start]<li><strong class="text-gray-900">Greek:</strong> Native language[cite: 40, 111].</li>
+                            [cite_start]<li><strong class="text-gray-900">English:</strong> Fluent[cite: 39, 113].</li>
+                            [cite_start]<li><strong class="text-gray-900">German:</strong> Good (B1~B2, stronger orally)[cite: 36, 112].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-screen p-6 bg-gray-200">
+            <div class="container mx-auto py-16 text-center">
+                <div class="max-w-xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Let's Connect</h2>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">
+                        Whether you are interested in a cybersecurity collaboration or a musical project, I'd love to hear from you.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-center space-x-4">
+                            <a href="mailto:fotis.nanos.sec@gmail.com" class="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+                                <span class="text-xl font-semibold">Email Me</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center space-x-4">
+                            <a href="https://www.linkedin.com/in/fotios-nanos" target="_blank" class="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-5 13h2v-4.6c0-2.2-.9-3.7-3.1-3.7-1.3 0-2.1.8-2.5 1.5h-.1v-1.3H9.4v8.1h2V13c0-1 .4-1.7 1.3-1.7.9 0 1.3.6 1.3 1.7v3h2v-4.6zM8 8a1 1 0 001-1.1A1 1 0 008 6a1 1 0 00-1 1.1 1 1 0 001 1zm-1 9h2v-8h-2v8z"></path></svg>
+                                <span class="text-xl font-semibold">LinkedIn</span>
+                            </a>
+                            <a href="https://tryhackme.com/p/StygianR00t" target="_blank" class="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.82-3.14L10.5 13.5l-3.32-.42L12 7.7l5.82 5.38-3.32.42.82 2.38-5.82-1.36z"></path></svg>
+                                <span class="text-xl font-semibold">TryHackMe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        document.getElementById('mobile-menu-button').onclick = function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        };
+    </script>
+</body>
+</html>
