@@ -6,14 +6,24 @@
     <title>Tuned for Security Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* A slightly more pronounced custom gradient for better visual effect */
         .custom-gradient {
-            background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+            background: linear-gradient(to right, #e5e7eb, #d1d5db);
+        }
+        /* Added transition for smooth mobile menu reveal */
+        .mobile-menu-transition {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu-transition.open {
+            max-height: 500px; /* A value large enough to fit all content */
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <nav class="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-md">
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-2xl font-bold text-gray-800 transition duration-300 hover:text-gray-600">Tuned for Security</a>
             <div class="space-x-8 hidden md:flex">
@@ -28,7 +38,7 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden custom-gradient px-6 pb-4">
+        <div id="mobile-menu" class="md:hidden custom-gradient px-6 mobile-menu-transition">
             <a href="#home" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Home</a>
             <a href="#cybersecurity" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Cybersecurity</a>
             <a href="#projects" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Projects</a>
@@ -55,7 +65,7 @@
             </div>
         </section>
 
-        <section id="cybersecurity" class="min-h-screen p-6 bg-gray-200">
+        <section id="cybersecurity" class="p-6 bg-gray-100">
             <div class="container mx-auto py-16">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">The Turn to Cybersecurity</h2>
@@ -107,15 +117,23 @@
             </div>
         </section>
 
-        <section id="projects" class="min-h-screen p-6 bg-gray-100">
+        <section id="projects" class="p-6 bg-gray-200">
             <div class="container mx-auto py-16">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Projects in Progress</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Projects</h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                        My personal projects demonstrate my ability to apply theoretical knowledge to practical applications, using modern technologies. I am currently working on uploading new projects to my GitHub profile, which will be available soon.
+                        My personal projects demonstrate my ability to apply theoretical knowledge to practical applications, using modern technologies.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-2">Vuln-Report-AI</h3>
+                        <p class="text-gray-700">
+                            An automated command-line tool that uses popular open-source security scanners and leverages a local Large Language Model (LLM) to generate a professional, actionable security report.
+                            <br><br>
+                            <a href="https://github.com/fotisnanossec/Vuln-Report-AI" target="_blank" class="text-blue-500 hover:underline font-semibold">View on GitHub</a>
+                        </p>
+                    </div>
                     <div class="bg-white p-6 rounded-lg shadow-xl hover:bg-gray-50 transition-colors duration-300">
                         <h3 class="text-2xl font-bold text-gray-600 mb-2">Auto-Vulnerability-Scanner</h3>
                         <p class="text-gray-700">
@@ -148,7 +166,7 @@
             </div>
         </section>
 
-        <section id="music" class="min-h-screen p-6 bg-gray-200">
+        <section id="music" class="p-6 bg-gray-100">
             <div class="container mx-auto py-16">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Music</h2>
@@ -241,7 +259,7 @@
             </div>
         </section>
 
-        <section id="about" class="min-h-screen p-6 bg-gray-100">
+        <section id="about" class="p-6 bg-gray-200">
             <div class="container mx-auto py-16">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">About Me</h2>
@@ -278,7 +296,7 @@
             </div>
         </section>
 
-        <section id="contact" class="min-h-screen p-6 bg-gray-200">
+        <section id="contact" class="p-6 bg-gray-100">
             <div class="container mx-auto py-16 text-center">
                 <div class="max-w-xl mx-auto">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Let's Connect</h2>
@@ -310,7 +328,7 @@
     <script>
         document.getElementById('mobile-menu-button').onclick = function() {
             var menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('open');
         };
     </script>
 </body>
