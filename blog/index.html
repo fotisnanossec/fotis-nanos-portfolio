@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Insights - Tuned for Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A slightly more pronounced custom gradient for better visual effect */
+        .custom-gradient {
+            background: linear-gradient(to right, #e5e7eb, #d1d5db);
+        }
+        /* Added transition for smooth mobile menu reveal */
+        .mobile-menu-transition {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu-transition.open {
+            max-height: 500px; /* A value large enough to fit all content */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="text-2xl font-bold text-gray-800 transition duration-300 hover:text-gray-600">Tuned for Security</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="/index.html#home" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Home</a>
+                <a href="/index.html#cybersecurity" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Cybersecurity</a>
+                <a href="/index.html#projects" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Projects</a>
+                <a href="#insights-main" class="text-lg font-bold text-gray-900 transition duration-300">Insights</a>
+                <a href="/index.html#music" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Music</a>
+                <a href="/index.html#about" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">About Me</a>
+                <a href="/index.html#contact" class="text-lg text-gray-800 hover:text-gray-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden custom-gradient px-6 mobile-menu-transition">
+            <a href="/index.html#home" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Home</a>
+            <a href="/index.html#cybersecurity" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Cybersecurity</a>
+            <a href="/index.html#projects" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Projects</a>
+            <a href="#insights-main" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Insights</a>
+            <a href="/index.html#music" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">Music</a>
+            <a href="/index.html#about" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300 border-b border-gray-300">About Me</a>
+            <a href="/index.html#contact" class="block py-2 text-gray-800 hover:text-gray-600 transition duration-300">Contact</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="insights-main" class="min-h-screen p-6 bg-gray-100">
+            <div class="container mx-auto py-16">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Cybersecurity Insights</h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        A collection of articles and analyses covering technical tutorials, threat intelligence, and digital defense strategies.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-xl flex flex-col">
+                        <img src="/Fotios.jpg" alt="Featured image for insights post" class="rounded-lg mb-4 object-cover h-48 w-full">
+                        <h2 class="text-2xl font-bold text-gray-600 mb-2">My First Blog Post: Cybersecurity Fundamentals</h2>
+                        <p class="text-sm text-gray-500 mb-4">Published on: September 1, 2025</p>
+                        <p class="text-gray-700 leading-relaxed flex-grow">
+                            Welcome to my first post! Here, I share my journey into the world of cybersecurity, focusing on fundamental principles like the Cyber Kill Chain and MITRE ATT&CK framework. I discuss how a background in classical music informs my approach to pattern recognition and discipline in digital defense.
+                        </p>
+                        <div class="mt-4">
+                            <a href="/blog/insights.html" class="inline-block bg-gray-800 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-gray-700 transition duration-300">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Tuned for Security. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('mobile-menu-button').onclick = function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        };
+    </script>
+</body>
+</html>
