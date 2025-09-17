@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical References | Tuned for Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-start items-center">
+            <a href="../../index.html" class="text-2xl font-bold text-gray-800 transition duration-300 hover:text-gray-600">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">SOC Technical References</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Security-focused technical documentation and analysis frameworks
+            </p>
+        </div>
+
+        <!-- Main Reference: OSI Model -->
+        <div class="bg-white p-8 rounded-lg shadow-xl mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">OSI Model - SOC Analyst Security Reference</h2>
+                <p class="text-lg text-gray-600">Layer-by-layer threat analysis and tool mapping for systematic network security investigation</p>
+                <a href="./osi-security-model.html" class="inline-block mt-4 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">View Complete OSI Analysis →</a>
+            </div>
+        </div>
+
+        <!-- Additional References Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gray-600 mb-4">MITRE ATT&CK Integration</h3>
+                <p class="text-gray-700 mb-4">
+                    Comprehensive technique mapping across all SOC investigation procedures with tactical and strategic threat analysis integration.
+                </p>
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+                    <h4 class="font-semibold text-red-800 mb-2">Framework Coverage</h4>
+                    <ul class="text-red-700 text-sm space-y-1">
+                        <li>• T1566: Phishing investigations</li>
+                        <li>• T1071: Application Layer Protocol analysis</li>
+                        <li>• T1059: Command and Scripting Interpreter</li>
+                        <li>• T1027: Obfuscated Files or Information</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-red-100 text-red-800 px-2 py-1 rounded text-xs mr-2">MITRE ATT&CK</span>
+                    <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Threat Intelligence</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gray-600 mb-4">SIEM Query Library</h3>
+                <p class="text-gray-700 mb-4">
+                    Splunk and ELK Stack integration examples with correlation rules and threat hunting queries across all playbook scenarios.
+                </p>
+                <div class="code-block text-xs">
+# Splunk - Phishing correlation
+index=email subject="*urgent*" | stats count by sender
+
+# ELK - Network anomaly detection
+GET /logs/_search
+{
+  "query": {
+    "range": {"bytes_out": {"gte": 1000000}}
+  }
+}
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">Splunk</span>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">ELK Stack</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gray-600 mb-4">NIST Framework Alignment</h3>
+                <p class="text-gray-700 mb-4">
+                    SOC procedures mapped to NIST Cybersecurity Framework functions with practical implementation examples and organizational integration.
+                </p>
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                    <h4 class="font-semibold text-purple-800 mb-2">Framework Functions</h4>
+                    <ul class="text-purple-700 text-sm space-y-1">
+                        <li>• Detect.AE: Anomalies and Events</li>
+                        <li>• Detect.CM: Security Continuous Monitoring</li>
+                        <li>• Respond.AN: Analysis and mitigation</li>
+                        <li>• Respond.IM: Improvements integration</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs mr-2">NIST Framework</span>
+                    <span class="inline-block bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Compliance</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gray-600 mb-4">Cyber Kill Chain Integration</h3>
+                <p class="text-gray-700 mb-4">
+                    Attack lifecycle analysis with detection and response points mapped across reconnaissance through actions on objectives.
+                </p>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                    <h4 class="font-semibold text-yellow-800 mb-2">Kill Chain Stages</h4>
+                    <ul class="text-yellow-700 text-sm space-y-1">
+                        <li>• Weaponization: Malware analysis procedures</li>
+                        <li>• Delivery: Email and network analysis</li>
+                        <li>• Exploitation: Endpoint investigation</li>
+                        <li>• Command & Control: Network traffic analysis</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs mr-2">Kill Chain</span>
+                    <span class="inline-block bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs">Attack Lifecycle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tool Integration Matrix -->
+        <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-center">Tool Correlation Matrix</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-600">
+                            <th class="text-left py-2 px-4">Layer</th>
+                            <th class="text-left py-2 px-4">Primary Tools</th>
+                            <th class="text-left py-2 px-4">TryHackMe Training</th>
+                            <th class="text-left py-2 px-4">Investigation Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-600">
+                        <tr>
+                            <td class="py-2 px-4 font-semibold text-blue-300">Layer 7</td>
+                            <td class="py-2 px-4">Burp Suite, Email analysis</td>
+                            <td class="py-2 px-4">Phishing, Web app security</td>
+                            <td class="py-2 px-4">Application vulnerabilities, malware</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 font-semibold text-green-300">Layer 4</td>
+                            <td class="py-2 px-4">Wireshark, netstat, nmap</td>
+                            <td class="py-2 px-4">Network Security module</td>
+                            <td class="py-2 px-4">TCP/UDP protocols, port security</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 font-semibold text-yellow-300">Layer 3</td>
+                            <td class="py-2 px-4">traceroute, IP analysis</td>
+                            <td class="py-2 px-4">Traffic Analysis</td>
+                            <td class="py-2 px-4">IP routing, addressing, packets</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 font-semibold text-purple-300">Layer 2</td>
+                            <td class="py-2 px-4">ARP tools, switch logs</td>
+                            <td class="py-2 px-4">Network fundamentals</td>
+                            <td class="py-2 px-4">MAC addresses, local network</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Professional Application -->
+        <div class="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Reference Application in SOC Operations</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Systematic Investigation</h3>
+                    <p class="text-sm text-gray-600">References provide structured approach to complex security incidents with clear methodology and tool selection.</p>
+                </div>
+                <div>
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Framework Integration</h3>
+                    <p class="text-sm text-gray-600">Industry-standard frameworks ensure enterprise compatibility and professional investigation documentation.</p>
+                </div>
+                <div>
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Tool Mastery Evidence</h3>
+                    <p class="text-sm text-gray-600">Comprehensive tool correlation demonstrates practical proficiency across the complete SOC analyst toolkit.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Tuned for Security. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
