@@ -30,101 +30,59 @@
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">SOC Technical References</h1>
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                Security-focused technical documentation and analysis frameworks
+                Technical analysis frameworks and investigation methodologies
             </p>
         </div>
 
-        <!-- Main Reference: OSI Model -->
-        <div class="bg-white p-8 rounded-lg shadow-xl mb-12">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">OSI Model - SOC Analyst Security Reference</h2>
-                <p class="text-lg text-gray-600">Layer-by-layer threat analysis and tool mapping for systematic network security investigation</p>
-                <a href="./osi-security-model.html" class="inline-block mt-4 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">View Complete OSI Analysis →</a>
-            </div>
-        </div>
-
-        <!-- Additional References Grid -->
+        <!-- Technical References Grid -->
         <div class="grid md:grid-cols-2 gap-8">
+            <!-- OSI Model Reference Card -->
             <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">MITRE ATT&CK Integration</h3>
+                <h3 class="text-xl font-bold text-gray-600 mb-4">OSI Model - SOC Security Reference</h3>
                 <p class="text-gray-700 mb-4">
-                    Comprehensive technique mapping across all SOC investigation procedures with tactical and strategic threat analysis integration.
+                    Layer-by-layer threat analysis and tool mapping for systematic network security investigation. Comprehensive framework connecting each OSI layer to specific security tools and investigation techniques.
                 </p>
-                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-                    <h4 class="font-semibold text-red-800 mb-2">Framework Coverage</h4>
-                    <ul class="text-red-700 text-sm space-y-1">
-                        <li>• T1566: Phishing investigations</li>
-                        <li>• T1071: Application Layer Protocol analysis</li>
-                        <li>• T1059: Command and Scripting Interpreter</li>
-                        <li>• T1027: Obfuscated Files or Information</li>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-4">
+                    <h4 class="font-semibold text-blue-800 mb-2">Layer Coverage</h4>
+                    <ul class="text-blue-700 text-sm space-y-1">
+                        <li>• Layer 7: Application vulnerabilities & malware</li>
+                        <li>• Layer 4: TCP/UDP protocols & port analysis</li>
+                        <li>• Layer 3: IP routing & packet analysis</li>
+                        <li>• Layer 2: MAC addresses & local network</li>
                     </ul>
                 </div>
+                <div class="mb-4">
+                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs mr-2">OSI Model</span>
+                    <span class="inline-block bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Network Analysis</span>
+                    <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Tool Mapping</span>
+                </div>
                 <div class="mt-4">
-                    <span class="inline-block bg-red-100 text-red-800 px-2 py-1 rounded text-xs mr-2">MITRE ATT&CK</span>
-                    <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Threat Intelligence</span>
+                    <a href="./osi-security-model.html" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">View OSI Analysis →</a>
                 </div>
             </div>
 
+            <!-- PCAP Methodology Card -->
             <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">SIEM Query Library</h3>
+                <h3 class="text-xl font-bold text-gray-600 mb-4">PCAP Analysis Methodology</h3>
                 <p class="text-gray-700 mb-4">
-                    Splunk and ELK Stack integration examples with correlation rules and threat hunting queries across all playbook scenarios.
+                    Systematic network forensics investigation guide with 4-phase approach to packet analysis. Developed through hands-on incident response training and TryHackMe SOC investigations.
                 </p>
-                <div class="code-block text-xs">
-# Splunk - Phishing correlation
-index=email subject="*urgent*" | stats count by sender
-
-# ELK - Network anomaly detection
-GET /logs/_search
-{
-  "query": {
-    "range": {"bytes_out": {"gte": 1000000}}
-  }
-}
-                </div>
-                <div class="mt-4">
-                    <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">Splunk</span>
-                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">ELK Stack</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">NIST Framework Alignment</h3>
-                <p class="text-gray-700 mb-4">
-                    SOC procedures mapped to NIST Cybersecurity Framework functions with practical implementation examples and organizational integration.
-                </p>
-                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
-                    <h4 class="font-semibold text-purple-800 mb-2">Framework Functions</h4>
-                    <ul class="text-purple-700 text-sm space-y-1">
-                        <li>• Detect.AE: Anomalies and Events</li>
-                        <li>• Detect.CM: Security Continuous Monitoring</li>
-                        <li>• Respond.AN: Analysis and mitigation</li>
-                        <li>• Respond.IM: Improvements integration</li>
+                <div class="bg-cyan-50 border-l-4 border-cyan-500 p-4 rounded mb-4">
+                    <h4 class="font-semibold text-cyan-800 mb-2">Investigation Phases</h4>
+                    <ul class="text-cyan-700 text-sm space-y-1">
+                        <li>• Phase 1: Initial Triage & Overview</li>
+                        <li>• Phase 2: Network Mapping & Assets</li>
+                        <li>• Phase 3: Threat Hunting & Anomalies</li>
+                        <li>• Phase 4: Deep Dive & Reconstruction</li>
                     </ul>
                 </div>
-                <div class="mt-4">
-                    <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs mr-2">NIST Framework</span>
-                    <span class="inline-block bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Compliance</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">Cyber Kill Chain Integration</h3>
-                <p class="text-gray-700 mb-4">
-                    Attack lifecycle analysis with detection and response points mapped across reconnaissance through actions on objectives.
-                </p>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <h4 class="font-semibold text-yellow-800 mb-2">Kill Chain Stages</h4>
-                    <ul class="text-yellow-700 text-sm space-y-1">
-                        <li>• Weaponization: Malware analysis procedures</li>
-                        <li>• Delivery: Email and network analysis</li>
-                        <li>• Exploitation: Endpoint investigation</li>
-                        <li>• Command & Control: Network traffic analysis</li>
-                    </ul>
+                <div class="mb-4">
+                    <span class="inline-block bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs mr-2">Network Forensics</span>
+                    <span class="inline-block bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Wireshark</span>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">TShark</span>
                 </div>
                 <div class="mt-4">
-                    <span class="inline-block bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs mr-2">Kill Chain</span>
-                    <span class="inline-block bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs">Attack Lifecycle</span>
+                    <a href="./pcap-methodology.html" class="inline-block bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-cyan-700 transition duration-300">View Methodology →</a>
                 </div>
             </div>
         </div>
@@ -174,8 +132,8 @@ GET /logs/_search
 
         <!-- Professional Application -->
         <div class="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg shadow-xl">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Reference Application in SOC Operations</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Technical Reference Application</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-center">
                 <div>
                     <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                         <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -191,17 +149,8 @@ GET /logs/_search
                             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Framework Integration</h3>
-                    <p class="text-sm text-gray-600">Industry-standard frameworks ensure enterprise compatibility and professional investigation documentation.</p>
-                </div>
-                <div>
-                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Tool Mastery Evidence</h3>
-                    <p class="text-sm text-gray-600">Comprehensive tool correlation demonstrates practical proficiency across the complete SOC analyst toolkit.</p>
+                    <h3 class="font-semibold text-gray-700 mb-2">Network Forensics Framework</h3>
+                    <p class="text-sm text-gray-600">PCAP methodology provides systematic 4-phase approach to network investigation with practical commands and incident response scenarios.</p>
                 </div>
             </div>
         </div>
