@@ -35,9 +35,9 @@
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">SOC Analyst Playbooks</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">SOC Investigation Methodology</h1>
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                Incident response documentation with systematic analytical methodology
+                Structured incident response documentation demonstrating systematic analytical approach
             </p>
         </div>
 
@@ -50,8 +50,58 @@
                 <h3 class="text-lg font-bold text-blue-800">Framework Integration</h3>
             </div>
             <p class="text-blue-700">
-                All playbooks integrate <strong>MITRE ATT&CK</strong> techniques, <strong>NIST Cybersecurity Framework</strong> alignment, and <strong>Cyber Kill Chain</strong> analysis for enterprise-grade incident response.
+                All procedures integrate <strong>MITRE ATT&CK</strong> techniques, <strong>NIST Cybersecurity Framework</strong> alignment, and <strong>Cyber Kill Chain</strong> analysis for systematic incident response.
             </p>
+        </div>
+
+        <!-- Tools Experience Section -->
+        <div class="bg-white p-8 rounded-lg shadow-xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Hands-On Security Tools Experience</h2>
+            <p class="text-gray-600 mb-6 text-center">
+                Practical experience gained through TryHackMe SOC Level 1 path and incident response simulations.
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-blue-600 mb-3">Network Analysis</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Wireshark</li>
+                        <li>• TShark</li>
+                        <li>• Zeek</li>
+                        <li>• NetworkMiner</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-green-600 mb-3">Digital Forensics</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Volatility</li>
+                        <li>• KAPE</li>
+                        <li>• Redline</li>
+                        <li>• Autopsy</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-purple-600 mb-3">Log Analysis</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Sysmon</li>
+                        <li>• Windows Event Logs</li>
+                        <li>• PowerShell Logging</li>
+                        <li>• Event Correlation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-orange-600 mb-3">Threat Intelligence</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• MISP</li>
+                        <li>• OpenCTI</li>
+                        <li>• YARA</li>
+                        <li>• VirusTotal</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Playbook Grid -->
@@ -90,27 +140,21 @@
                     </div>
                 </div>
 
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Key Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">VirusTotal</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">YARA</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">OpenCTI</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">MISP</span>
-                    </div>
-                </div>
-
                 <div class="code-block text-xs">
-# SPF/DKIM/DMARC verification
+# Email header authentication check
 grep -i "Authentication-Results:" email_header.txt
+
 # Hash analysis workflow  
 md5sum suspicious_attachment.doc
-# Domain reputation check
+echo "hash" | sha256sum
+
+# Domain reputation verification
 dig +short suspicious-domain.com
+whois suspicious-domain.com
                 </div>
 
                 <div class="mt-6">
-                    <a href="#" class="inline-block bg-red-300 text-white font-bold py-2 px-4 rounded-lg cursor-not-allowed opacity-75">Complete Playbook (Coming Soon)</a>
+                    <span class="inline-block bg-red-200 text-red-800 font-bold py-2 px-4 rounded-lg text-sm">Methodology Documented • Full Playbook In Development</span>
                 </div>
             </div>
 
@@ -123,7 +167,7 @@ dig +short suspicious-domain.com
                         </svg>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-800">Network Traffic Anomaly</h2>
+                        <h2 class="text-2xl font-bold text-gray-800">Network Traffic Analysis</h2>
                         <p class="text-sm text-gray-600">MITRE: T1071, T1041 • Framework: Detect.CM</p>
                     </div>
                 </div>
@@ -146,27 +190,19 @@ dig +short suspicious-domain.com
                     </div>
                 </div>
 
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Analysis Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Wireshark</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Zeek</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Brim</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">NetworkMiner</span>
-                    </div>
-                </div>
-
                 <div class="code-block text-xs">
 # TShark rapid analysis
 tshark -r capture.pcap -q -z conv,ip
+
 # Zeek log analysis
 cat conn.log | zeek-cut id.orig_h id.resp_h service
-# Snort rule development
-alert tcp any any -> any any (msg:"Suspicious C2";)
+
+# Network conversation analysis
+tshark -r capture.pcap -z endpoints,ip
                 </div>
 
                 <div class="mt-6">
-                    <a href="#" class="inline-block bg-blue-300 text-white font-bold py-2 px-4 rounded-lg cursor-not-allowed opacity-75">Complete Playbook (Coming Soon)</a>
+                    <span class="inline-block bg-blue-200 text-blue-800 font-bold py-2 px-4 rounded-lg text-sm">Methodology Documented • Full Playbook In Development</span>
                 </div>
             </div>
 
@@ -175,11 +211,11 @@ alert tcp any any -> any any (msg:"Suspicious C2";)
                 <div class="flex items-center mb-6">
                     <div class="bg-green-100 p-3 rounded-full mr-4">
                         <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-800">Endpoint Compromise</h2>
+                        <h2 class="text-2xl font-bold text-gray-800">Endpoint Investigation</h2>
                         <p class="text-sm text-gray-600">MITRE: T1059, T1055 • Framework: Respond.AN</p>
                     </div>
                 </div>
@@ -202,27 +238,19 @@ alert tcp any any -> any any (msg:"Suspicious C2";)
                     </div>
                 </div>
 
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Forensic Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Volatility</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Sysinternals</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Sysmon</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Redline</span>
-                    </div>
-                </div>
-
                 <div class="code-block text-xs">
 # Process tree analysis
-.\PsList.exe -t
+Get-Process | Format-Table -AutoSize
+
 # Sysmon event correlation
-Get-WinEvent -FilterHashtable @{LogName='Sysmon'}
-# Volatility memory analysis
-volatility -f memory.dump pslist
+Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'}
+
+# Memory analysis preparation
+vol -f memory.dump windows.pslist
                 </div>
 
                 <div class="mt-6">
-                    <a href="#" class="inline-block bg-green-300 text-white font-bold py-2 px-4 rounded-lg cursor-not-allowed opacity-75">Complete Playbook (Coming Soon)</a>
+                    <span class="inline-block bg-green-200 text-green-800 font-bold py-2 px-4 rounded-lg text-sm">Methodology Documented • Full Playbook In Development</span>
                 </div>
             </div>
 
@@ -258,98 +286,33 @@ volatility -f memory.dump pslist
                     </div>
                 </div>
 
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Analysis Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">YARA</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">VirusTotal</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Sandbox</span>
-                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm">Process Monitor</span>
-                    </div>
-                </div>
-
                 <div class="code-block text-xs">
 # Static analysis commands
 file malware_sample.exe
 strings malware_sample.exe | grep -E "http"
-yara -r /path/to/rules/ malware_sample.exe
-# Behavioral monitoring with Volatility
-volatility -f infected.dump yarascan
+
+# Hash-based identification
+md5sum malware_sample.exe
+sha256sum malware_sample.exe
+
+# YARA rule scanning
+yara -r /opt/yara-rules/ malware_sample.exe
                 </div>
 
                 <div class="mt-6">
-                    <a href="#" class="inline-block bg-orange-300 text-white font-bold py-2 px-4 rounded-lg cursor-not-allowed opacity-75">Complete Playbook (Coming Soon)</a>
+                    <span class="inline-block bg-orange-200 text-orange-800 font-bold py-2 px-4 rounded-lg text-sm">Methodology Documented • Full Playbook In Development</span>
                 </div>
             </div>
         </div>
 
-        <!-- SIEM Integration Section -->
-        <div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-lg shadow-xl mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-center">SIEM Integration Across All Playbooks</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-blue-300">Splunk Queries</h3>
-                    <div class="code-block bg-gray-800 text-green-400">
-# Phishing correlation
-index=email subject="*urgent*" | stats count by sender
-
-# Network anomaly detection  
-index=network bytes_out > 1000000 | eval MB=round(bytes_out/1024/1024,2)
-
-# Endpoint compromise indicators
-index=windows EventCode=4688 | stats count by process
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-purple-300">ELK Stack Queries</h3>
-                    <div class="code-block bg-gray-800 text-yellow-400">
-{
-  "query": {
-    "bool": {
-      "must": [
-        {"range": {"@timestamp": {"gte": "now-24h"}}},
-        {"terms": {"event.code": ["4624", "4625"]}}
-      ]
-    }
-  }
-}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Professional Application -->
-        <div class="bg-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Professional SOC Application</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="text-center">
-                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Systematic Methodology</h3>
-                    <p class="text-sm text-gray-600">Each playbook follows proven investigation workflows with clear timing, tool integration, and escalation procedures for immediate SOC deployment.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Framework Alignment</h3>
-                    <p class="text-sm text-gray-600">MITRE ATT&CK mapping, NIST Framework integration, and industry best practices ensure enterprise-grade analysis and documentation standards.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Tool Mastery Evidence</h3>
-                    <p class="text-sm text-gray-600">Demonstrated proficiency across 25+ security tools with practical command examples and integration workflows for comprehensive incident response.</p>
-                </div>
-            </div>
+        <!-- Application Summary -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Investigation Framework</h2>
+            <p class="text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
+                Systematic investigation procedures integrating MITRE ATT&CK techniques and NIST Framework alignment. 
+                Each methodology demonstrates structured analytical approach with practical tool integration for 
+                consistent incident response and threat analysis.
+            </p>
         </div>
     </main>
 

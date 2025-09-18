@@ -28,112 +28,156 @@
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">SOC Technical References</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Analysis References</h1>
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                Technical analysis frameworks and investigation methodologies
+                Technical analysis frameworks and systematic investigation methodologies for network security and threat analysis
             </p>
         </div>
 
         <!-- Technical References Grid -->
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- OSI Model Reference Card -->
-            <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">OSI Model - SOC Security Reference</h3>
-                <p class="text-gray-700 mb-4">
-                    Layer-by-layer threat analysis and tool mapping for systematic network security investigation. Comprehensive framework connecting each OSI layer to specific security tools and investigation techniques.
-                </p>
-                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-4">
-                    <h4 class="font-semibold text-blue-800 mb-2">Layer Coverage</h4>
-                    <ul class="text-blue-700 text-sm space-y-1">
-                        <li>• Layer 7: Application vulnerabilities & malware</li>
-                        <li>• Layer 4: TCP/UDP protocols & port analysis</li>
-                        <li>• Layer 3: IP routing & packet analysis</li>
-                        <li>• Layer 2: MAC addresses & local network</li>
-                    </ul>
-                </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Network Security Models Card -->
+            <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
                 <div class="mb-4">
-                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs mr-2">OSI Model</span>
-                    <span class="inline-block bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Network Analysis</span>
-                    <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Tool Mapping</span>
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-700 text-center">Network Security Models</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">OSI & TCP/IP Framework Analysis</p>
                 </div>
-                <div class="mt-4">
-                    <a href="./osi-security-model.html" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">View OSI Analysis →</a>
+                
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Comprehensive security analysis framework mapping both OSI 7-layer and TCP/IP 4-layer models. 
+                    Layer-by-layer threat analysis with SOC analyst tool mapping for systematic network security investigation.
+                </p>
+                
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-6">
+                    <h4 class="font-semibold text-blue-800 mb-2">Framework Coverage</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <h5 class="font-medium text-blue-700 mb-1">OSI Model</h5>
+                            <ul class="text-blue-600 space-y-1 text-xs">
+                                <li>• Layer 7: Applications</li>
+                                <li>• Layer 4: Transport</li>
+                                <li>• Layer 3: Network</li>
+                                <li>• Layer 2: Data Link</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-blue-700 mb-1">TCP/IP Model</h5>
+                            <ul class="text-blue-600 space-y-1 text-xs">
+                                <li>• Application Layer</li>
+                                <li>• Transport Layer</li>
+                                <li>• Internet Layer</li>
+                                <li>• Network Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">OSI Model</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">TCP/IP</span>
+                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Tool Mapping</span>
+                    <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Network Analysis</span>
+                </div>
+                
+                <div class="text-center">
+                    <a href="./osi-security-model.html" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-blue-700 hover:to-purple-700 transition duration-300">
+                        View Security Models →
+                    </a>
                 </div>
             </div>
 
             <!-- PCAP Methodology Card -->
-            <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gray-600 mb-4">PCAP Analysis Methodology</h3>
-                <p class="text-gray-700 mb-4">
-                    Systematic network forensics investigation guide with 4-phase approach to packet analysis. Developed through hands-on incident response training and TryHackMe SOC investigations.
+            <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                <div class="mb-4">
+                    <div class="bg-gradient-to-r from-cyan-500 to-teal-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-700 text-center">PCAP Analysis Framework</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">Systematic Network Forensics Methodology</p>
+                </div>
+                
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Systematic 4-phase approach to network packet analysis and forensic investigation. 
+                    Developed through hands-on incident response training and comprehensive TryHackMe SOC investigations.
                 </p>
-                <div class="bg-cyan-50 border-l-4 border-cyan-500 p-4 rounded mb-4">
+                
+                <div class="bg-cyan-50 border-l-4 border-cyan-500 p-4 rounded mb-6">
                     <h4 class="font-semibold text-cyan-800 mb-2">Investigation Phases</h4>
-                    <ul class="text-cyan-700 text-sm space-y-1">
-                        <li>• Phase 1: Initial Triage & Overview</li>
-                        <li>• Phase 2: Network Mapping & Assets</li>
-                        <li>• Phase 3: Threat Hunting & Anomalies</li>
-                        <li>• Phase 4: Deep Dive & Reconstruction</li>
+                    <ul class="text-cyan-700 text-sm space-y-2">
+                        <li>• <span class="font-medium">Phase 1:</span> Initial Triage & Traffic Overview</li>
+                        <li>• <span class="font-medium">Phase 2:</span> Network Mapping & Asset Identification</li>
+                        <li>• <span class="font-medium">Phase 3:</span> Threat Hunting & Anomaly Detection</li>
+                        <li>• <span class="font-medium">Phase 4:</span> Deep Dive Investigation & Event Reconstruction</li>
                     </ul>
                 </div>
-                <div class="mb-4">
-                    <span class="inline-block bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs mr-2">Network Forensics</span>
-                    <span class="inline-block bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Wireshark</span>
-                    <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">TShark</span>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Network Forensics</span>
+                    <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Wireshark</span>
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">TShark</span>
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Packet Analysis</span>
                 </div>
-                <div class="mt-4">
-                    <a href="./pcap-methodology.html" class="inline-block bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-cyan-700 transition duration-300">View Methodology →</a>
+                
+                <div class="text-center">
+                    <a href="./pcap-methodology.html" class="inline-block bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-cyan-700 hover:to-teal-700 transition duration-300">
+                        View PCAP Framework →
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Tool Integration Matrix -->
-        <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-2xl font-bold mb-6 text-center">Tool Correlation Matrix</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm">
-                    <thead>
-                        <tr class="border-b border-gray-600">
-                            <th class="text-left py-2 px-4">Layer</th>
-                            <th class="text-left py-2 px-4">Primary Tools</th>
-                            <th class="text-left py-2 px-4">TryHackMe Training</th>
-                            <th class="text-left py-2 px-4">Investigation Focus</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-600">
-                        <tr>
-                            <td class="py-2 px-4 font-semibold text-blue-300">Layer 7</td>
-                            <td class="py-2 px-4">Burp Suite, Email analysis</td>
-                            <td class="py-2 px-4">Phishing, Web app security</td>
-                            <td class="py-2 px-4">Application vulnerabilities, malware</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 font-semibold text-green-300">Layer 4</td>
-                            <td class="py-2 px-4">Wireshark, netstat, nmap</td>
-                            <td class="py-2 px-4">Network Security module</td>
-                            <td class="py-2 px-4">TCP/UDP protocols, port security</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 font-semibold text-yellow-300">Layer 3</td>
-                            <td class="py-2 px-4">traceroute, IP analysis</td>
-                            <td class="py-2 px-4">Traffic Analysis</td>
-                            <td class="py-2 px-4">IP routing, addressing, packets</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 font-semibold text-purple-300">Layer 2</td>
-                            <td class="py-2 px-4">ARP tools, switch logs</td>
-                            <td class="py-2 px-4">Network fundamentals</td>
-                            <td class="py-2 px-4">MAC addresses, local network</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Investigation Workflow -->
+        <div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-lg shadow-xl mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">SOC Investigation Workflow</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-300">Framework-Based Analysis</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                            <span><strong>Model Selection:</strong> Choose appropriate framework (OSI vs TCP/IP) based on investigation scope</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                            <span><strong>Layer Analysis:</strong> Systematic layer-by-layer threat investigation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
+                            <span><strong>Tool Integration:</strong> Map appropriate security tools to each network layer</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-300">PCAP Investigation Process</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <span class="bg-cyan-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                            <span><strong>Triage:</strong> Initial traffic overview and statistical analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                            <span><strong>Asset Mapping:</strong> Network topology and device identification</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
+                            <span><strong>Deep Analysis:</strong> Detailed investigation with timeline reconstruction</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Professional Application -->
-        <div class="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg shadow-xl">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Technical Reference Application</h2>
-            <div class="grid md:grid-cols-2 gap-8 text-center">
+        <!-- Professional Application Summary -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Reference Framework Application</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div>
                     <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                         <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -141,17 +185,35 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-gray-700 mb-2">Systematic Investigation</h3>
-                    <p class="text-sm text-gray-600">References provide structured approach to complex security incidents with clear methodology and tool selection.</p>
+                    <p class="text-sm text-gray-600">Structured methodology ensuring comprehensive analysis coverage with clear procedural frameworks for complex security incidents.</p>
                 </div>
                 <div>
-                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-cyan-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Network Forensics Framework</h3>
-                    <p class="text-sm text-gray-600">PCAP methodology provides systematic 4-phase approach to network investigation with practical commands and incident response scenarios.</p>
+                    <h3 class="font-semibold text-gray-700 mb-2">Network Forensics Expertise</h3>
+                    <p class="text-sm text-gray-600">4-phase PCAP analysis methodology with practical commands and real-world incident response scenarios from comprehensive training.</p>
                 </div>
+                <div>
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Tool Integration Framework</h3>
+                    <p class="text-sm text-gray-600">Strategic mapping of security tools to investigation phases, ensuring optimal resource utilization and comprehensive threat analysis coverage.</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                    These technical references demonstrate systematic approach to network security investigation, 
+                    combining theoretical frameworks with practical application. The methodologies reflect hands-on 
+                    experience gained through comprehensive SOC training and provide structured workflows for 
+                    complex incident response scenarios.
+                </p>
             </div>
         </div>
     </main>
